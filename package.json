@@ -1,0 +1,59 @@
+{
+  "name": "haskell-shader-qq",
+  "displayName": "haskell-shader-qq",
+  "description": "Syntax highlighting for Haskell shader QuasiQuotes",
+  "version": "0.0.1",
+  "publisher": "jtnuttall",
+  "engines": {
+    "vscode": "^1.78.0"
+  },
+  "keywords": [
+    "language",
+    "haskell",
+    "glsl",
+    "quasiquotes",
+    "highlight",
+    "syntax"
+  ],
+  "license": "MIT",
+  "icon": "icon.png",
+  "bugs": {
+    "url": "https://github.com/jtnuttall/vscode-haskell-shader-qq/issues"
+  },
+  "homepage": "https://github.com/jtnuttall/vscode-haskell-shader-qq/blob/master/README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jtnuttall/vscode-haskell-shader-qq.git"
+  },
+  "extensionDependencies": [
+    "justusadam.language-haskell",
+    "slevesque.shader"
+  ],
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "grammars": [
+      {
+        "injectTo": [
+          "source.haskell"
+        ],
+        "scopeName": "source.inline.glsl.qq",
+        "path": "./syntaxes/glsl-qq.tmLanguage.json",
+        "embeddedLanguages": {
+          "source.glsl": "glsl"
+        }
+      },
+      {
+        "injectTo": [
+          "source.haskell"
+        ],
+        "scopeName": "source.inline.hlsl.qq",
+        "path": "./syntaxes/hlsl-qq.tmLanguage.json",
+        "embeddedLanguages": {
+          "source.hlsl": "hlsl"
+        }
+      }
+    ]
+  }
+}
